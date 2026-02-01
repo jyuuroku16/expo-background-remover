@@ -1,0 +1,37 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+group = 'com.backgroundremover'
+version = '1.0.0'
+
+android {
+  compileSdkVersion 34
+  namespace "com.backgroundremover"
+
+  defaultConfig {
+    minSdkVersion 21
+    targetSdkVersion 34
+    versionCode 1
+    versionName "1.0"
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_11
+    targetCompatibility JavaVersion.VERSION_11
+  }
+
+  kotlinOptions {
+    jvmTarget = '11'
+  }
+}
+
+dependencies {
+  implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.22"
+  implementation 'com.google.android.gms:play-services-mlkit-subject-segmentation:16.0.0-beta1'
+  
+  // Expo modules can rely on compileOnly for expo-modules-core if it's provided by the app
+  // or implementation if we want to be safe. Since we are running from source, 
+  // 'implementation project(":expo-modules-core")' might be inferred if autolinked.
+  // But typically for local modules:
+  implementation project(':expo-modules-core')
+}

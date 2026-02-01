@@ -1,8 +1,0 @@
-{
-  "compilerOptions": {
-    "paths": {
-      "react-native-background-remover": ["../../packages/react-native-background-remover/src/index"]
-    }
-  },
-  "extends": "expo/tsconfig.base",
-}

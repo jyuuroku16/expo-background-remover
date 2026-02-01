@@ -1,9 +1,0 @@
-pre-push:
-  parallel: true
-  commands:
-    lint:
-      glob: "*.{js,ts,jsx,tsx}"
-      run: yarn lint
-    types:
-      glob: "*.{js,ts, jsx, tsx}"
-      run: yarn typecheck

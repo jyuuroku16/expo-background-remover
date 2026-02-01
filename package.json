@@ -1,41 +1,25 @@
 {
-  "name": "react-native-background-remover-monorepo",
-  "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
+  "name": "expo-background-remover",
+  "version": "1.0.0",
+  "description": "Universal background removal for Expo",
+  "main": "index.ts",
+  "types": "index.d.ts",
+  "scripts": {},
+  "keywords": [
+    "react-native",
+    "expo",
+    "background-removal",
+    "vision",
+    "mlkit"
   ],
-  "scripts": {
-    "library": "yarn workspace @six33/react-native-bg-removal",
-    "bare": "yarn workspace bare-example",
-    "expo": "yarn workspace expo-example",
-    "lint": "turbo run lint",
-    "lint:fix": "turbo run lint -- --fix",
-    "typecheck": "turbo run typecheck",
-    "build:android": "turbo run build:android",
-    "build:ios": "turbo run build:ios"
+  "author": "Jyuuroku16",
+  "license": "MIT",
+  "dependencies": {
+    "expo-modules-core": "*"
   },
-  "devDependencies": {
-    "@evilmartians/lefthook": "^1.5.0",
-    "@react-native/eslint-config": "^0.73.1",
-    "@typescript-eslint/eslint-plugin": "^8.38.0",
-    "@typescript-eslint/parser": "^8.38.0",
-    "eslint": "^9.12.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "prettier": "^3.0.3",
-    "turbo": "^1.10.7",
-    "typescript": "^5.2.2"
-  },
-  "resolutions": {
-    "@types/react": "^18.2.44"
-  },
-  "packageManager": "yarn@4.5.0",
-  "prettier": {
-    "quoteProps": "consistent",
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "es5",
-    "useTabs": false
+  "peerDependencies": {
+    "expo": "*",
+    "react": "*",
+    "react-native": "*"
   }
 }
